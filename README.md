@@ -10,9 +10,14 @@ together on the same project. For this Hackathon it will be just WDI class,
 but look forward to an opportunity to work with the UXDI (User Interface 
 Design) and/or DSI (Data Science) classes in the near future.
 
+### Before You Start
+
+* Nominate one person to be the *git master*. This will be the person who makes your group's "official" repository.
+* Report to your instructor the names of your team members and the name of your *git master*.
+
 ### Format
 
-You'll be in small groups of ~3 people. You are welcome to use the code in this repository as "starter code" if you wish. The idea is to work as quickly as possible toward something presentable, so make sure to delegate and check in with each other regularly to ensure no one is stuck on something.
+You'll be in small groups of ~3 people. You are welcome to use the code in this repository as "starter code" if you wish (see instructions below). The idea is to work as quickly as possible toward something presentable, so make sure to delegate and check in with each other regularly to ensure no one is stuck on something.
 
 You are free to make use of the facilities - work in the class or in the lounge, use whiteboards, projectors, etc., as needed. Get permission from an instructor if you would like to work offsite (like a nearby coffee shop or something). There will be no lessons to interrupt your work, but instructors will be around and available to assist you.
 
@@ -23,7 +28,7 @@ You are free to make use of the facilities - work in the class or in the lounge,
 * Consider things that may save you time. For example, maybe use bootstrap or a free theme to make your code look nice instead of starting from scratch.
 * Make GitHub your friend, not your enemy
     * Don't wait until the last second to get your code on GitHub.
-    * Choose one person to be the git master (owner of the main repository)
+    * Choose one person to be the *git master* (owner of the main repository)
     * Commit and push stuff OFTEN
 * Try not to put off the "hard stuff" for last
 * Don't be afraid to ask for help! Instructors and TAs won't bite. (Probably)
@@ -41,8 +46,9 @@ Many jobs have these kinds of events on a regular basis, so consider it a good o
 ### To Use This Repo as Starter Code
 
 * One group member (git master): Fork this repository
-    * Other group members, fork your git master's repository not this one!
+    * Other group members, you should still fork your git master's repository
+* Clone the repo to your local computer
 * Run *npm install*
 * Run nodemon and view *http://localhost:3000*
 
-Be sure and change the readme file contents and ng-app name to refer to your own project.
+There's your bare-bones MEAN app. Be sure and change the readme file contents and ng-app name to refer to your own project.
