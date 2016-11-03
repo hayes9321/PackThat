@@ -1,0 +1,8 @@
+<div class="well" ng-repeat="item in items track by $index">
+  <h1>{{itemsList.itemName}}</h1>
+  <img ng-src="{{item.image}}">
+  <p>{{itemsList.description}}</p>
+  <p>{{itemsList.weight}}</p>
+  <a ng-href="/items/{{itemsList._id}}">Link</a>
+  <a ng-click="deleteItem(itemsList._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+</div>
