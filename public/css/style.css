@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* MAIN SECTION BLOCKING */
+
+section {
+  display: block;
+  padding: 1.5em 0;
+  overflow: auto;
+}
+
+.inlineHeaderLeft {
+  float: left;
+}
+
+.inlineHeaderRight {
+  float: right;
+}
+
+/* DETAILS */
+
+div.backpack {
+  border: 2px black solid;
+  height: 10em;
+}
+
+p.descriptor, input.descriptorInput {
+  font-size: 1.5em;
+}
+
+ul, li {
+  list-style: none;
+}
+
