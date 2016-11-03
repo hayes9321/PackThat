@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mean Hackathon</title>
+  <title>Backpack</title>
   <base href="/">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <script src="app/app.js"></script>
   <script src="app/controllers.js"></script>
+  <link rel="stylesheet" type="text/css" href="app/css/style.css">
 </head>
 <body ng-app="MeanHackathon">
   <div class="container">
+
     <div ui-view></div>
-    <div ng-controller="test"></div>
+
+    <section>
+
+      <h1>Backpack</h1>
+
+      <div class="backpack">
+        
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="inlineHeaderLeft">
+
+        <p class="descriptor">Total Weight </p>
+
+        <input type="number" class="descriptorInput" disabled>
+
+      </div>
+      
+    </section>
+
+    <section>
+
+      <div class="inlineHeaderLeft">
+      
+        <p class="descriptor">Item</p>
+
+        <input type="text" placeholder="Enter an item here..." class="descriptorInput">
+
+      </div>
+
+      <div class="inlineHeaderRight">
+
+        <p class="descriptor">Weight </p>
+
+        <input type="number" class="descriptorInput">
+
+      </div>
+
+    </section>
+
+    <section class="itemStorage">
+
+    <ul>
+      <li>
+
+        <p class="inlineHeaderLeft">Item Name</p> 
+      
+        <p class="inlineHeaderRight">Weight</p>
+
+      </li>
+    </ul>
+
+    </section>
   </div>
 </body>
 </html>
