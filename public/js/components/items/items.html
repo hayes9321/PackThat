@@ -1,8 +1,10 @@
-<div class="well" ng-repeat="item in list.items track by $index">
+<p>Testing...</p>
+<div class="well" ng-repeat="item in itemsList.items track by $index">
   <h1>{{item.itemName}}</h1>
-  <img ng-src="/items/{{item.img}}">
+  <img ng-src="{{item.img}}">
   <p>{{item.description}}</p>
   <p>{{item.weight}}</p>
-  <a ng-href="/items/{{item._id}}">Link</a>
-  <a ng-click="deleteItem(items/{{item._id}}, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+  <p>{{item.itemType}}</p>
+  <a ng-href="/{{item._id}}">Link</a>
+  <!-- <button ng-href="deleteSelected({{item_id}})" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button> -->
 </div>
