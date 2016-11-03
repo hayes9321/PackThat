@@ -5,14 +5,17 @@
   <base href="/">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
   <script src="app/app.js"></script>
   <script src="app/controllers.js"></script>
+  <script src="js/components/add-item/add-item.js"></script>
   <script src="js/components/items/items.js"></script>
   <script src="js/components/pack-item/pack-item.js"></script>
-  <script src="js/components/services.js"></script>
+  <script src="js/services.js"></script>
+
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-<body ng-app="MeanHackathon">
+<body ng-app="BackpackApp">
   <div class="container">
 
     <div ui-view></div>
@@ -73,5 +76,8 @@
 
     </section>
   </div>
+
+  <add-item></add-item>
+
 </body>
 </html>

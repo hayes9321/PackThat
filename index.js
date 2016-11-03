@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost/meanhackathon');
 //Use statements
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use('/api/items', require('./controllers/itemsList_controller'));
 
 //Remember - the /* means we are catching all the incoming routes

@@ -1,28 +1,33 @@
 (function() {
 angular.module("BackpackApp")
 .component("addItem", {
-  templateUrl: "app/components/add-item/add-item.html",
+  templateUrl: "js/components/add-item/add-item.html",
      controller: AddItem,
      controllerAs: "addItem"
    });
  
-   function addItem(BackpackService, $state) {
-     var addItem = this;
- 
-     addItem.newItem = {
-       itemName: " ",
-       itemType: " ",
-       description: " ",
-       img: " ",
-       weight: " "
+  function AddItem($state, BackpackService){
+    var addItem = this;
+    addItem.item = [];
+      addItem.newItem = {
+      itemName: " ",
+      itemType: " ",
+      description: " ",
+      img: " ",
+      weight: " "
      };
+
+    addItem.updateItem = function(){
+      
+    BackpackService.addItem(addItem.newItem, function(res) {
+      BackpackService.getAllItems(function(data) {
+          addItem.item = data.data;
+          $state.go('home', {}, {reload : true});
+        });
+      });
+    }
+  }
  
-     addItem.updateItem = function() {
-       BackpackService.addItem(addItem.newItem);
-       $state.go("/");
-     };
-   };
  
- 
-   AddItem.$inject = ["BackpackService", "$state"]
+   AddItem.$inject = ["$state", "BackpackService"]
  })()

@@ -1,17 +1,12 @@
 (function(){
 angular.module('BackpackApp')
 .component('packItem', {
-  templateUrl: 'js/components/pack-item/pack-item.js',
+  template: '<h1>Hello</h1>',
   controller: PackItemCtrl,
   controllerAs: 'packItem'
-})
+	});
 
-
-function PackItemCtrl() {
-
-}
-
-
-
-
+	function PackItemCtrl(){
+		console.log('hello');
+	}
 })()
