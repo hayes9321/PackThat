@@ -12,10 +12,17 @@ function ItemsCtrl($scope, BackpackService) {
 
   list.selected = "";
 
+  list.total = 0;
+
   BackpackService.getAllItems(function(res){
     list.items = res.data;
-
     console.log(list.items);
+
+    list.items.forEach(function(item){
+      list.total += item.weight;
+      console.log(list.total);
+    })
+
 
   });
 

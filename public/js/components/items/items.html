@@ -1,5 +1,7 @@
 <h2>What's In Your Backpack</h2>
 
+<p>The total weight is: {{itemsList.total}} ounces!</p>
+
 <div class="well" ng-repeat="item in itemsList.items track by $index" class="itemList">
 
   <p class="listText"><strong>Name:</strong> {{item.itemName}}</p>
@@ -8,6 +10,6 @@
   <p class="listText"><strong>Weight:</strong> {{item.weight}}</p>
   <a ng-href="/{{item._id}}">Link to Item</a>
   <!-- <button ng-href="updateSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Update</button> -->
-  <button ng-click="deleteSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button>
+  <button ng-click="listItems.deleteSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button>
 
 </div>
