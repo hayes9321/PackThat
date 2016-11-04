@@ -37,7 +37,7 @@ angular.module('BackpackApp')
   }
 
   this.deleteItem = function(itemId, callback) {
-    $http.delete('/api/items' + itemId).then(function success(res) {
+    $http.delete('/api/items/' + itemId).then(function success(res) {
       callback(res);
     }, function error(res) {
       console.log(res);
