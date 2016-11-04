@@ -43,3 +43,7 @@ ul, li {
   list-style: none;
 }
 
+.listText {
+  padding: 1em 0;
+}
+
