@@ -36,7 +36,7 @@ function ItemsCtrl($scope, BackpackService) {
 
   list.deleteSelected = function(id) {
     console.log("delete");
-    BackpackService.deleteItem(list.params.id, function(res){
+    BackpackService.deleteItem(id, function(res){
 
     getItems();
 
