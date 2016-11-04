@@ -2,41 +2,44 @@
 
 <div class="addItemDiv" ng-if="addItem.on != 'true'">
 
-  <button class="addItemButton" ng-click="addItem.displayForm('true')">Add an Item To Your Backpack</button>
+  <button class="addItemButton btn main-btn headlinebtn" ng-click="addItem.displayForm('true')">Pack Your Bag</button>
 
 </div>
 
 <div ng-if="addItem.on == 'true'">
 
-<h2 class="addItemTitle">Add Your Item Now!</h2>
+<h2 class="addItemTitle">Select Your Gear</h2>
+<p class="p-headline">Choose the specific gear for your next adventure and calculate price and weight</p>
 
 <form ng-submit="addItem.updateItem()">
   <div class="listText">
-    <label class="descriptor">Name</label>
-    <input type="text" ng-model="addItem.newItem.itemName" class="inlineHeaderRight">
+    <label class="headline">Name</label>
+    <input type="text" ng-model="addItem.newItem.itemName" class="form-control">
   </div>
-<!--   <div class="listText">
-    <label class="descriptor">Type</label>
-    <input type="text" ng-model="addItem.newItem.itemType" class="inlineHeaderRight">
-  </div> -->
+
   <div class="listText">
-    <label class="descriptor">Description</label>
-    <input type="text" ng-model="addItem.newItem.description" class="inlineHeaderRight">
+    <label class="headline">Type</label>
+    <input type="text" ng-model="addItem.newItem.itemType" class="form-control">
   </div>
+
   <div class="listText">
-    <label class="descriptor">Image</label>
-    <input type="text" ng-model="addItem.newItem.img" class="inlineHeaderRight">
+    <label class="headline">Description</label>
+    <input type="text" ng-model="addItem.newItem.description" class="form-control">
   </div>
   <div class="listText">
-    <label class="descriptor">Weight</label>
-    <input type="integer" ng-model="addItem.newItem.weight" class="inlineHeaderRight">
+    <label class="headline">Image</label>
+    <input type="text" ng-model="addItem.newItem.img" class="form-control">
+  </div>
+  <div class="listText">
+    <label class="headline">Weight</label>
+    <input type="integer" ng-model="addItem.newItem.weight" class="form-control">
   </div> 
-  <input type="submit">
+  <input type="submit" class="addItemButton btn">
 </form>
 
 <div class="addItemDiv" ng-if="addItem.on != 'false'">
 
-  <button class="addItemButton" ng-click="addItem.displayForm('false')">Never mind.</button>
+  <button class="addItemButton btn headlinebtn" ng-click="addItem.displayForm('false')">Never mind.</button>
 
 </div>
 
@@ -50,6 +53,9 @@
 <!-- comment -->
 
 
+  
+  
+  
   
   
   

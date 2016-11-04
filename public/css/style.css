@@ -1,57 +1,100 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  width: 75%;
-  margin: 0 auto;
-}
 
 h1 {
   text-align: center;
+  font-family: "Tungsten A", "Tungsten B" !important;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-/* MAIN SECTION BLOCKING */
-
-section {
-  display: block;
-  padding: 1.5em 0;
-  overflow: auto;
+h2 {
+  font-family: "Tungsten A", "Tungsten B" !important;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 
-.inlineHeaderLeft {
-  float: left;
+h2 span {
+  letter-spacing: 20px;
 }
 
-.inlineHeaderRight {
-  float: right;
+.clearfix {
+  padding-bottom: 10px;
 }
 
+.headline {
+  font-family: "Tungsten A", "Tungsten B" !important;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .8px;
+}
+
+.headlinebtn {
+  font-family: "Tungsten A", "Tungsten B" !important;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1.2px;
+  border-radius: 20px;
+}
+
+.headlinebtn:hover {
+  background-color: black;
+  color: white;
+  border-style: none;
+}
+.hero-headline {
+  color: white;
+  margin-top: -5px;
+  padding-top: 120px;
+  font-size: 100px;
+  letter-spacing: 1px;
+}
+
+.p-headline {
+  text-align: center;
+  margin-top: -14px;
+  font-weight: bold;
+}
+
+.main-btn {
+  margin-bottom: 140px;
+}
+
+.well {
+  background-color: #FFF !important;
+}
+
+.item-img {
+  height: 200px;
+  margin-top: -50px;
+  padding-left: 15px;
+}
 /* DETAILS */
 
-div.backpack {
-  border: 2px black solid;
-  height: 10em;
+
+
+.hero {
+  background-image: url('/hero.png');
+  height: 435px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 80px;
 }
 
-.descriptor, input.descriptorInput {
-  font-size: 1.5em;
-}
 
-ul, li {
-  list-style: none;
-}
-
-.listText {
-  padding: 1em 0;
-}
 
 /* Add An Item */
 
 .addItemTitle {
   text-align: center;
-  padding: 1em;
 }
 
 .addItemDiv {
@@ -59,13 +102,9 @@ ul, li {
 }
 
 .addItemButton {
-  padding: 1em;
+  border-radius: 20px;
 }
 
-.addFormSection {
-  border: 3px solid black;
-  padding: 1em;
-}
 
 
 

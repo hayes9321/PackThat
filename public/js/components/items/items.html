@@ -1,4 +1,4 @@
-<h2>What's In Your Backpack</h2>
+<h1>What's In Your Backpack</h1>
 
 
 <label name="weight"> How Much You Want To Carry: </label>
@@ -17,12 +17,13 @@ Your bag is {{itemsList.total - itemsList.totalPounds}} pounds overweight!
 
 <div class="well" ng-repeat="item in itemsList.items track by $index" class="itemList">
 
-  <p class="listText"><strong>Name:</strong> {{item.itemName}}</p>
-    <img ng-src="{{item.img}}">
-  <p class="listText"><strong>Description:</strong> {{item.description}}</p>
-  <p class="listText"><strong>Weight:</strong> {{item.weight}}</p>
-<!--   <a ng-href="/{{item._id}}">Link to Item</a> -->
-  
-  <button ng-click="itemsList.deleteSelected(item._id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button>
+<h2>{{item.itemName}}</h2>
+    <img class="pull-right item-img" ng-src="{{item.img}}">
+  <p class="listText"><span class="headline">Weight:</span> {{item.weight}} lbs</p>
+  <p class="listText"> <span class="headline">Cost:</span> ${{item.itemType}}.00</p>
+  <p class="listText"><span class="headline">Description:</span> {{item.description}}</p>
+  <!-- <button ng-href="updateSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Update</button> -->
+<button ng-click="itemsList.deleteSelected(item_id)" class="btn btn-danger headlinebtn">Delete</button>
+
 
 </div>
