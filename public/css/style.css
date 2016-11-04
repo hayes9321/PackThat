@@ -35,7 +35,7 @@ div.backpack {
   height: 10em;
 }
 
-p.descriptor, input.descriptorInput {
+.descriptor, input.descriptorInput {
   font-size: 1.5em;
 }
 
@@ -46,4 +46,26 @@ ul, li {
 .listText {
   padding: 1em 0;
 }
+
+/* Add An Item */
+
+.addItemTitle {
+  text-align: center;
+  padding: 1em;
+}
+
+.addItemDiv {
+  text-align: center;
+}
+
+.addItemButton {
+  padding: 1em;
+}
+
+.addFormSection {
+  border: 3px solid black;
+  padding: 1em;
+}
+
+
 

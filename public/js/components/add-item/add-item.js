@@ -26,6 +26,14 @@ angular.module("BackpackApp")
         });
       });
     }
+
+    addItem.on = 'false';
+
+    addItem.displayForm = function(boolean){
+      addItem.on = boolean;
+    }
+
+
   }
  
  
