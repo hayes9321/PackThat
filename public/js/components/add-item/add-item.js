@@ -6,7 +6,7 @@ angular.module("BackpackApp")
      controllerAs: "addItem"
    });
  
-  function AddItem($state, BackpackService){
+  function AddItem($state, $rootScope, BackpackService){
     var addItem = this;
     addItem.item = [];
       addItem.newItem = {
@@ -22,7 +22,19 @@ angular.module("BackpackApp")
     BackpackService.addItem(addItem.newItem, function(res) {
       BackpackService.getAllItems(function(data) {
           addItem.item = data.data;
-          $state.go('home', {}, {reload : true});
+
+          $rootScope.$broadcast('update', true);
+
+          addItem.on = false;
+
+          addItem.newItem = {
+          itemName: " ",
+          itemType: " ",
+          description: " ",
+          img: " ",
+          weight: " "
+          };
+
         });
       });
     }
@@ -37,5 +49,5 @@ angular.module("BackpackApp")
   }
  
  
-   AddItem.$inject = ["$state", "BackpackService"]
+   AddItem.$inject = ["$state", "$rootScope", "BackpackService"]
  })()

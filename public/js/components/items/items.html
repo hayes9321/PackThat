@@ -23,7 +23,7 @@ Your bag is {{itemsList.total - itemsList.totalPounds}} pounds overweight!
   <p class="listText"> <span class="headline">Cost:</span> ${{item.itemType}}.00</p>
   <p class="listText"><span class="headline">Description:</span> {{item.description}}</p>
   <!-- <button ng-href="updateSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Update</button> -->
-<button ng-click="itemsList.deleteSelected(item_id)" class="btn btn-danger headlinebtn">Delete</button>
+  <button ng-click="itemsList.deleteSelected(item._id)" class="btn btn-danger glyphicon glyphicon-trash">Delete</button>
 
 
 </div>

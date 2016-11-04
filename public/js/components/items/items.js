@@ -29,22 +29,25 @@ function ItemsCtrl($scope, BackpackService) {
       console.log(list.total);
     })
 
-
   });
 
   }
 
+$scope.$on('update', function(event, params){
+    list.total = 0;
+    getItems();
+  })
+
   list.deleteSelected = function(id) {
     console.log("delete");
     BackpackService.deleteItem(id, function(res){
-
+    list.total = 0;
     getItems();
 
     });
   }
 
 }
-
 
 ItemsCtrl.$inject = ['$scope', 'BackpackService'];
 
