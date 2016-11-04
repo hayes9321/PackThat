@@ -1,10 +1,38 @@
-<p>Testing...</p>
 <div class="well" ng-repeat="item in itemsList.items track by $index">
-  <h1>{{item.itemName}}</h1>
-  <img ng-src="{{item.img}}">
-  <p>{{item.description}}</p>
-  <p>{{item.weight}}</p>
-  <p>{{item.itemType}}</p>
-  <a ng-href="/{{item._id}}">Link</a>
-  <!-- <button ng-href="deleteSelected({{item_id}})" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button> -->
+
+  <div ng-if="item.itemType == '1'">
+
+  <h2>Primary Items</h2>
+
+    <p class="listText"><strong>Name:</strong> {{item.itemName}}</p>
+    <img ng-src="{{item.img}}">
+    <p class="listText"><strong>Description:</strong> {{item.description}}</p>
+    <p class="listText"><strong>Weight:</strong> {{item.weight}}</p>
+    <a ng-href="/{{item._id}}">Link to Item</a>
+    <button ng-href="updateSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Update</button>
+    <button ng-href="deleteSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button>
+
+  </div>
+
 </div>
+
+<div>
+
+<div ng-if="item.itemType == 'secondary'">
+
+  <h2>Secondary Items</h2>
+
+    <p class="listText"><strong>Name:</strong> {{item.itemName}}</p>
+    <img ng-src="{{item.img}}">
+    <p class="listText"><strong>Description:</strong> {{item.description}}</p>
+    <p class="listText"><strong>Weight:</strong> {{item.weight}}</p>
+    <a ng-href="/{{item._id}}">Link</a>
+    <button ng-href="updateSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Update</button>
+    <button ng-href="deleteSelected(item_id)" class="btn btn-danger glyphicon glyphicon-trash pull-right">Delete</button>
+
+</div>
+
+</div>
+
+</div>
+

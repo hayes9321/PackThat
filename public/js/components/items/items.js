@@ -6,38 +6,30 @@ angular.module('BackpackApp')
   controllerAs: 'itemsList'
 })
 
-var primaryItems = [];
-var secondaryItems = [];
-
 function ItemsCtrl($scope, BackpackService) {
 
   var list = this;
+
+  list.selected = "";
+
   BackpackService.getAllItems(function(res){
     list.items = res.data;
 
-  //   list.items.forEach(function(item) {
-  //   if(item.itemType = 'primary') {
-  //     primaryItems.push(item);
-  //   } else {
-  //     secondaryItems.push(item);
-  //   }
-  // }) 
-  //   console.log(list.items);
-    
+    console.log(list.items);
+
   });
 
-
   var deleteSelected = function(id) {
-    console.log("deleted!");
     BackpackService.deleteItem(id);
   }
 
-
-
-  // list.items
-
+  var updateSelected = function(id) {
+    BackpackService.updateItem(id);
+  }
 
 }
+
+
 
 ItemsCtrl.$inject = ['$scope', 'BackpackService'];
 
