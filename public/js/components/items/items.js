@@ -14,6 +14,12 @@ function ItemsCtrl($scope, BackpackService) {
 
   list.total = 0;
 
+  list.totalPounds = 35;
+
+  getItems();
+
+  function getItems() {
+
   BackpackService.getAllItems(function(res){
     list.items = res.data;
     console.log(list.items);
@@ -26,17 +32,18 @@ function ItemsCtrl($scope, BackpackService) {
 
   });
 
-  var deleteSelected = function(id) {
-    console.log("delete");
-    BackpackService.deleteItem(id);
   }
 
-  // var updateSelected = function(id) {
-  //   BackpackService.updateItem(id);
-  // }
+  list.deleteSelected = function(id) {
+    console.log("delete");
+    BackpackService.deleteItem(id, function(res){
+
+    getItems();
+
+    });
+  }
 
 }
-
 
 
 ItemsCtrl.$inject = ['$scope', 'BackpackService'];
