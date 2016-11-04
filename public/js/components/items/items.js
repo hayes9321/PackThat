@@ -20,12 +20,13 @@ function ItemsCtrl($scope, BackpackService) {
   });
 
   var deleteSelected = function(id) {
+    console.log("delete");
     BackpackService.deleteItem(id);
   }
 
-  var updateSelected = function(id) {
-    BackpackService.updateItem(id);
-  }
+  // var updateSelected = function(id) {
+  //   BackpackService.updateItem(id);
+  // }
 
 }
 
